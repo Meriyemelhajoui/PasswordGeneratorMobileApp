@@ -1,0 +1,96 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/text_password_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Click on Generate"
+        android:textColor="#FAFAFA"
+
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="Copy" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose the password Content: "
+            android:textColor="@color/white"
+            />
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/check_lower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lower Case" />
+        <CheckBox
+            android:id="@+id/check_upper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upper Case" />
+        <CheckBox
+            android:id="@+id/check_numeric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Numeric Value" />
+        <CheckBox
+            android:id="@+id/check_special_char"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Special Chars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Password Size"/>
+            <EditText
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:id="@+id/edit_pwd_size"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="8"
+                android:layout_height="wrap_content"
+                android:hint="Password Size"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/red_danger"/>
+
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="Generate"/>
+    </LinearLayout>
+
+</LinearLayout>
