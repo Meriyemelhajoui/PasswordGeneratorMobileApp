@@ -1,96 +1,44 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="30dp">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+android:gravity="center">
 
-    <TextView
-        android:id="@+id/text_password_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Click on Generate"
-        android:textColor="#FAFAFA"
+<ImageView
+    android:layout_width="332dp"
+    android:layout_height="338dp"
+    android:layout_marginBottom="24dp"
+    android:contentDescription="App Icon"
+    android:src="@drawable/pic1" />
 
-        android:textSize="25sp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Welcome to Secure Password Generator"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="15dp"
+    android:gravity="center"/>
 
-    <Button
-        android:id="@+id/btn_copy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
-        android:text="Copy" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Secure your online accounts with strong passwords!"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:layout_marginBottom="24dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose the password Content: "
-            android:textColor="@color/white"
-            />
-
-        <CheckBox
-            android:checked="true"
-            android:id="@+id/check_lower"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lower Case" />
-        <CheckBox
-            android:id="@+id/check_upper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Upper Case" />
-        <CheckBox
-            android:id="@+id/check_numeric"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Numeric Value" />
-        <CheckBox
-            android:id="@+id/check_special_char"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Special Chars" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Password Size"/>
-            <EditText
-                android:inputType="numberDecimal"
-                android:gravity="center"
-                android:id="@+id/edit_pwd_size"
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:text="8"
-                android:layout_height="wrap_content"
-                android:hint="Password Size"/>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/text_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/red_danger"/>
-
-        <Button
-            android:id="@+id/btn_generate"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_700"
-            android:text="Generate"/>
-    </LinearLayout>
+<Button
+    android:id="@+id/btn_get_started"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Get Started"
+    android:textSize="16sp"
+    android:backgroundTint="@color/teal_700"
+    android:textColor="#FFFFFF"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"/>
 
 </LinearLayout>

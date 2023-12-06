@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red_danger">#E91E1E</color>
+
+    <color name="colorWeak">#FF0000</color>       <!-- Red for weak -->
+    <color name="colorModerate">#FFA500</color>   <!-- Orange for moderate -->
+    <color name="colorStrong">#008000</color>     <!-- Green for strong -->
 </resources>

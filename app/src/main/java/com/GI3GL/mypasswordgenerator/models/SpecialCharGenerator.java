@@ -1,7 +1,9 @@
 package com.GI3GL.mypasswordgenerator.models;
 
 public class SpecialCharGenerator extends PasswordGenerator {
-    private static final char[] SPECIAL_CHAR_ARRAY = "?./!%*$^+-)]@(['{}#<>".toCharArray();
+    public  static final char[] SPECIAL_CHAR_ARRAY = "?./!%*$^+-)]@(['{}#<>".toCharArray();
+
+
 
     @Override
     public String getChar() {

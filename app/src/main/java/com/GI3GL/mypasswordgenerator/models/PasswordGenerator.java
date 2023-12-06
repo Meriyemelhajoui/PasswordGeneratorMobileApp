@@ -1,5 +1,7 @@
 package com.GI3GL.mypasswordgenerator.models;
 
+import static com.GI3GL.mypasswordgenerator.models.SpecialCharGenerator.SPECIAL_CHAR_ARRAY;
+
 import java.util.ArrayList;
 
 public abstract class PasswordGenerator {
@@ -61,4 +63,54 @@ public abstract class PasswordGenerator {
 
     }
 
-}
+
+
+    public static String checkPasswordStrength(String password) {
+        int score = 0;
+
+        // Check length
+        int length = password.length();
+
+        if (length >= 8 && length <= 12) {
+            score++;
+        }
+
+        if (length >12 && length <= 15) {
+            score++;
+        }
+
+
+        // Check for uppercase and lowercase characters
+        boolean hasUpperCase = !password.equals(password.toLowerCase());
+        boolean hasLowerCase = !password.equals(password.toUpperCase());
+
+        if (hasUpperCase && hasLowerCase) {
+            score++;
+        }
+
+        // Check for special characters
+        if (containsSpecialCharacter(password)) {
+            score++;
+        }
+
+        // Determine strength based on score
+        if (score >= 3) {
+            return "Strong";
+        } else if (score >= 2) {
+            return "Moderate";
+        } else {
+            return "Weak";
+        }
+    }
+
+    public static boolean containsSpecialCharacter(String password) {
+        for (char ch : password.toCharArray()) {
+            for (char specialChar : SPECIAL_CHAR_ARRAY) {
+                if (ch == specialChar) {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+} }
